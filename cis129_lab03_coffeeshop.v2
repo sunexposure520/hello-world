@@ -1,0 +1,50 @@
+# Given Customer orders items at My Coffee and Muffin Shop
+# When Number of each item is entered into the application
+# Then Number of items ordered should be captured
+     # AND The items ordered should be displayed
+     # AND The price of each item should be added up to a total
+     # AND Tax should be applied to total
+     # AND Thank you statement should be provided
+
+# Input Variables
+coffee = int(input('Number of coffees bought? '))
+print(coffee)
+muffin = int(input('Number of muffins bought? '))
+tea = int(input('Number of teas bought? '))
+scone = int(input('Number of scones bought? '))
+
+# Price Variables
+coffee_price = 5
+muffin_price = 4
+scone_price = 4
+tea_price = 3
+
+# Total Variables
+coffee_total = coffee * coffee_price
+muffin_total = muffin * muffin_price
+scone_total = scone * scone_price
+tea_total = tea * tea_price
+total = coffee_total + muffin_total + tea_total + scone_total
+tax = total * 0.78
+
+print('*' * 39)
+print('My Coffee and Muffin Shop')
+print("Number of coffees bought?" ,coffee)
+print("Number of muffins bought?",muffin)
+print("Number of scones bought?",scone)
+print("Number of tea bought?" ,tea)
+print('***************************************\n\n***************************************')
+print('My Coffee and Muffin Shop Receipt')
+if coffee > 0:
+    print(coffee, "Coffee at $" + str(coffee_price) + " each: $" + str(coffee_total) + ".00")
+if muffin > 0:
+    print(muffin, "Muffins at $" + str(muffin_price) + " each: $" + str(muffin_total) + ".00")
+if scone > 0:
+    print(scone, "Scones at $" + str(scone_price) + " each: $" + str(scone_total) + ".00")
+if tea > 0:
+    print(tea, "Tea at $" + str(tea_price) + " each: $" + str(tea_total) + ".00")
+print("6% tax: $.78")
+print("---------")
+print("Total: $", tax)
+print('*' * 39)
+print('Thank you for coming to My Coffee and Muffin Shop! Yall Come Back Now!')
