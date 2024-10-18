@@ -1,0 +1,24 @@
+def enter_bottle_data(counter):
+    salesIncrease = 0
+    totalBottles = 0
+    totalpayout = 0
+
+    day = 1
+    while day <= 7:  
+        todayBottles = int(input(f"Enter number of bottles for day #{day}: "))
+        totalBottles += todayBottles
+        day += 1 
+    
+    totalpayout = totalBottles * 0.1
+    print(f"\nThe total number of bottles collected is {totalBottles}")
+    print(f"The total paid out is $ {totalpayout:.2f}\n")
+
+
+counter = 0
+
+while True:
+    enter_bottle_data(counter)
+    keepGoing = input("Do you want to enter another week’s worth of data? \n(Enter y or n): ")
+    if keepGoing != 'y':
+        break
+    counter += 1  
